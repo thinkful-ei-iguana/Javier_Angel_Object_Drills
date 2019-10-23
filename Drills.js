@@ -102,3 +102,21 @@ let newObject = {
   meals:['breakfast', 'second breakfast', 'elevenses', 'lunch', 'afternoon tea', 'dinner', 'supper']
 };
 console.log(newObject['meals'][3]);
+
+
+
+const avengers = [
+  {name: 'Tony Stark',
+    jobTitle: 'Genius, billionaire,playboy, philanthropist'},
+  {name: 'Thor',
+    jobTitle: 'God of Hammers'},
+  {name: 'Black Widow',
+    jobTitle: 'Eye Candy'},
+  {name: 'Clint Barton',
+    jobTitle: 'Guy who shoots arrows'},
+  {name: 'Ant Man',
+    jobTitle: 'Paul Rudd'}
+];
+
+let result = avengers.forEach(avenger => console.log(`${avenger.name}: ${avenger.jobTitle}`));
+
