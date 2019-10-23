@@ -5,7 +5,7 @@ function createMyObject () {
     answerToUniverse: 42,
     'olly olly': 'oxen free',
     sayHello: function () {
-      return 'Hello!';
+      //return 'Hello!';
     }
   };
 }
@@ -97,3 +97,8 @@ const rickRolled = {
 for(let prop in rickRolled){
   console.log(`${prop}: ${rickRolled[prop]}`)
 }
+
+let newObject = {
+  meals:['breakfast', 'second breakfast', 'elevenses', 'lunch', 'afternoon tea', 'dinner', 'supper']
+};
+console.log(newObject['meals'][3]);
