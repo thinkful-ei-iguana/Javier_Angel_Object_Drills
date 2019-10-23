@@ -63,3 +63,17 @@ function findById (items, idNum) {
   return items.find(item => item.id === idNum);
 }
 
+function validateKeys(object,expectedKeys){
+  let keys = Object.keys(object)
+  
+  if(keys.length === expectedKeys.length){
+    for(let i = 0; i < expectedKeys.length ; i++){
+      if(keys[i] === expectedKeys[i]){
+        return true
+
+      }
+    }
+  }
+
+return false
+}
