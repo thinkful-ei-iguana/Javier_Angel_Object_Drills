@@ -84,7 +84,7 @@ return false
    // return (this.water / this.flour)* 100;
  //}
 //};
-console.log(loaf.flour, loaf.water, loaf.hydration());
+//console.log(loaf.flour, loaf.water, loaf.hydration());
 
 const rickRolled = {
   foo: 'Never',
@@ -102,7 +102,6 @@ let newObject = {
   meals:['breakfast', 'second breakfast', 'elevenses', 'lunch', 'afternoon tea', 'dinner', 'supper']
 };
 console.log(newObject['meals'][3]);
-
 
 
 const avengers = [
@@ -130,8 +129,14 @@ const avengers = [
     boss: 'Nick Fury'},
 ];
 
-let result = avengers.forEach( avenger => avengers.boss ? console.log(`${avenger.name}: ${avenger.jobTitle} reports to ${boss}`) : console.log(`${avenger.name}: ${avenger.jobTitle} reports to no one`));
+let result = avengers.forEach(avenger => { 
+  if(avenger.boss){ 
+    console.log(`${avenger.name}, ${avenger.jobTitle},reports to ${avenger.boss}`); 
+  } else { 
+    console.log(`${avenger.name}, ${avenger.jobTitle}, doesn't report to anybody`); 
+  } });
 
-//avengers.forEach(avenger => console.log(`${avenger.name}: ${avenger.jobTitle} reports to ${boss}`));
 console.log(result);
+
+
 
