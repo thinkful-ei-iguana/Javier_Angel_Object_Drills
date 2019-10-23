@@ -47,3 +47,14 @@ function makeStudentReport(data){
   }
   return newObj `name: ${name}, grade: ${grade}`
 }
+
+function enrollInSummerSchool (students){
+  return students.map(student => {
+    let newObj = {
+      name: `${student.name}`,
+      status: 'in summer school',
+      course: `${student.course}`
+    }
+    return newObj;
+  })
+}
