@@ -11,3 +11,13 @@ function createMyObject() {
 }
 let newObj2 = createMyObject();
 console.log(newObj2.sayHello());
+
+
+function updateObject(obj) {
+  obj.foo = 'foo',
+  obj.bar = 'bar',
+  obj.bizz = 'bizz',
+  obj.bang = 'bang' , 
+
+  return obj;
+}
