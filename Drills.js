@@ -138,6 +138,39 @@ let result = avengers.forEach(avenger => {
 
 console.log(result);
 
+
+function decode(encode){
+  const decoder = {
+    a:2,
+    b:3,
+    c:4,
+    d:5,
+    space: ' ',
+  };
+  let cracked = '';
+  let words = encode.split(' ');
+  
+  for(let i = 0; i < words.length; i++){
+    for(let prop in decoder){
+      if(words[i].slice(0,1) === prop){
+        cracked += words[i][decoder[prop] -1 ]
+        //cracked.push(words[i][decoder[prop] - 1]);
+      } else {//if (words[i].slice(0,1) !== prop){
+          cracked += ''
+        //cracked.push([decoder['space']]);
+      }
+    }
+  }
+  
+  console.log(cracked);
+  return cracked;
+}
+
+let codedMessage = 'craft block argon meter bells brown croon droop';
+decode(codedMessage);
+
+
+
 const createCharacter = {
   name:' Gandalf the White',
   nickname:'gandalf',
