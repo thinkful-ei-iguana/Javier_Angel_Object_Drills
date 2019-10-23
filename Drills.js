@@ -39,3 +39,11 @@ function keyDeleter(obj) {
   delete obj.bar
   return obj
 }
+
+function makeStudentReport(data){
+  let newObj = {
+    name,
+    grade,
+  }
+  return newObj `name: ${name}, grade: ${grade}`
+}
