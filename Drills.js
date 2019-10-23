@@ -138,5 +138,12 @@ let result = avengers.forEach(avenger => {
 
 console.log(result);
 
-
+const createCharacter = {
+  name:' Gandalf the White',
+  nickname:'gandalf',
+  race:
+  origin:
+  attack:
+  defense:
+}
 
