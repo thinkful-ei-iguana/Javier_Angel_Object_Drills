@@ -77,13 +77,13 @@ function validateKeys(object,expectedKeys){
 return false
 }
 
-let loaf = {
-  flour:300, 
-  water:200,
-  hydration: function(){
-    return (this.water / this.flour)* 100;
-  }
-};
+//let loaf = {
+  //flour:300, 
+ // water:200,
+  //hydration: function(){
+   // return (this.water / this.flour)* 100;
+ //}
+//};
 console.log(loaf.flour, loaf.water, loaf.hydration());
 
 const rickRolled = {
@@ -106,17 +106,32 @@ console.log(newObject['meals'][3]);
 
 
 const avengers = [
+  {name: 'Nick Fury',
+    jobTitle: 'Owner of The Avengers'},
+
   {name: 'Tony Stark',
-    jobTitle: 'Genius, billionaire,playboy, philanthropist'},
+    jobTitle: 'Genius, billionaire,playboy, philanthropist',
+    boss: 'Nick Fury'},
+
   {name: 'Thor',
-    jobTitle: 'God of Hammers'},
+    jobTitle: 'God of Hammers',
+    boss: 'Nick Fury'},
+
   {name: 'Black Widow',
-    jobTitle: 'Eye Candy'},
+    jobTitle: 'Eye Candy',
+    boss: 'Nick Fury'},
+
   {name: 'Clint Barton',
-    jobTitle: 'Guy who shoots arrows'},
+    jobTitle: 'Guy who shoots arrows',
+    boss: 'Nick Fury'},
+
   {name: 'Ant Man',
-    jobTitle: 'Paul Rudd'}
+    jobTitle: 'Paul Rudd',
+    boss: 'Nick Fury'},
 ];
 
-let result = avengers.forEach(avenger => console.log(`${avenger.name}: ${avenger.jobTitle}`));
+let result = avengers.forEach( avenger => avengers.boss ? console.log(`${avenger.name}: ${avenger.jobTitle} reports to ${boss}`) : console.log(`${avenger.name}: ${avenger.jobTitle} reports to no one`));
+
+//avengers.forEach(avenger => console.log(`${avenger.name}: ${avenger.jobTitle} reports to ${boss}`));
+console.log(result);
 
