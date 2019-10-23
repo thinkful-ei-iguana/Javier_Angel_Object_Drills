@@ -13,14 +13,14 @@ let newObj2 = createMyObject();
 console.log(newObj2.sayHello());
 
 
-function updateObject (obj) {
-  obj.foo = 'foo',
-  obj.bar = 'bar',
-  obj.bizz = 'bizz',
-  obj.bang = 'bang' , 
+//* function updateObject (obj) { 
+  // obj.foo = 'foo',
+ // obj.bar = 'bar',
+  //obj.bizz = 'bizz',
+  //obj.bang = 'bang' , 
 
-  return obj;
-}
+  //return obj;
+//}
 
 function personMaker() {
     var person = {
@@ -74,6 +74,14 @@ function validateKeys(object,expectedKeys){
       }
     }
   }
-
 return false
 }
+
+let loaf = {
+  flour:300, 
+  water:200,
+  hydration: function(){
+    return (this.water / this.flour)* 100;
+  }
+};
+console.log(loaf.flour, loaf.water, loaf.hydration());
